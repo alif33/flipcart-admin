@@ -1,10 +1,11 @@
 import {Container, Nav, Navbar} from 'react-bootstrap'
-
+import { NavLink, Link } from 'react-router-dom'
 function Header(props) {
   return (
       <Navbar bg="dark" expand="lg" variant="dark">
           <Container>
-            <Navbar.Brand href="#home">Admin Dashboard</Navbar.Brand>
+            {/* <Navbar.Brand href="#home">Admin Dashboard</Navbar.Brand> */}
+                <NavLink to="/" className="navbar-brand">Admin Dashboard</NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
@@ -12,7 +13,12 @@ function Header(props) {
                     <Nav.Link href="#link">Link</Nav.Link>
                     </Nav>
                     <Nav>
-                    <Nav.Link href="#home">Signin</Nav.Link>
+                      <li className="nav-item">
+                        <NavLink to="/signin" className="nav-link">Signin</NavLink>
+                      </li>
+                      <li className="nav-item">
+                        <NavLink to="/signup" className="nav-link">Signup</NavLink>
+                      </li>
                     </Nav>
             </Navbar.Collapse>
           </Container>

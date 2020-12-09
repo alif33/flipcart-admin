@@ -3,8 +3,8 @@ import Header from '../Haeder/index'
 function Layout(props) {
   return (
     <>
-        <Header />
-        {props.children}
+      <Header />
+      {props.children}
     </>
   );
 }
